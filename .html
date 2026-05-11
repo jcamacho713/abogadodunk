@@ -91,13 +91,18 @@
       font-size: 1rem;
     }
 
-    .brand-mark {$1background: var(--green);
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: var(--green);
       display: grid;
       place-items: center;
       color: var(--white);
       font-size: 1.35rem;
       font-weight: 900;
       box-shadow: 0 0 0 5px rgba(106,161,47,0.26);
+      flex: 0 0 auto;
     }
 
     .nav-links {
@@ -111,7 +116,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--blue);
+      color: var(--green);
     }
 
     .btn {
@@ -135,14 +140,14 @@
       transform: translateY(-2px);
     }
 
-    .btn-red {
-      background: var(--green);
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
       color: var(--white);
-      box-shadow: 0 12px 28px rgba(106,161,47,0.34);
+      box-shadow: 0 12px 28px rgba(15,85,126,0.34);
     }
 
-    .btn-red:hover {
-      background: var(--green-dark);
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
     }
 
     .btn-outline {
@@ -151,7 +156,7 @@
     }
 
     .btn-outline:hover {
-      border-color: var(--blue);
+      border-color: var(--green);
       background: rgba(106,161,47,0.16);
     }
 
@@ -254,7 +259,7 @@
       color: var(--white);
     }
 
-    .section-red {
+    .section-gradient {
       background: linear-gradient(135deg, var(--blue), var(--green));
       color: var(--white);
     }
@@ -296,7 +301,11 @@
       border-color: var(--line);
     }
 
-    .card-icon {$1background: var(--green);
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--green);
       color: var(--white);
       display: grid;
       place-items: center;
@@ -322,7 +331,11 @@
       gap: 12px;
     }
 
-    .practice-item {$1background: linear-gradient(135deg, #151515, rgba(106,161,47,0.18));
+    .practice-item {
+      border: 1px solid rgba(106,161,47,0.45);
+      border-radius: 16px;
+      padding: 16px;
+      background: linear-gradient(135deg, #151515, rgba(106,161,47,0.18));
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.03em;
@@ -382,7 +395,7 @@
     }
 
     .contact-row:hover {
-      color: var(--blue);
+      color: var(--green);
     }
 
     .contact-row:hover .icon {
@@ -417,6 +430,11 @@
       outline: none;
     }
 
+    select option {
+      background: var(--dark);
+      color: var(--white);
+    }
+
     textarea {
       min-height: 130px;
       resize: vertical;
@@ -424,6 +442,11 @@
 
     input::placeholder, textarea::placeholder {
       color: rgba(255,255,255,0.62);
+    }
+
+    .form-note {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.68);
     }
 
     .footer {
@@ -448,7 +471,12 @@
       margin-top: 16px;
     }
 
-    .social-btn {$1background: var(--green);
+    .social-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--white);
       display: grid;
       place-items: center;
       font-weight: 900;
@@ -514,8 +542,14 @@
         padding: 54px 0;
       }
 
-      .hero-actions .btn {
+      .hero-actions .btn,
+      .nav > .btn {
         width: 100%;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        padding: 12px 0;
       }
 
       .practice-grid {
@@ -553,7 +587,7 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn-red" href="tel:7135886000">Llamar 713-588-6000</a>
+      <a class="btn btn-primary" href="tel:7135886000">Llamar 713-588-6000</a>
     </div>
   </header>
 
@@ -568,7 +602,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-red" href="tel:7135886000">Llame ahora: 713-588-6000</a>
+            <a class="btn btn-primary" href="tel:7135886000">Llame ahora: 713-588-6000</a>
             <a class="btn btn-outline" href="#contacto">Solicitar consulta gratis</a>
           </div>
 
@@ -643,7 +677,7 @@
         </div>
 
         <div style="margin-top: 34px;">
-          <a class="btn btn-red" href="tel:7135886000">Hablar con un abogado: 713-588-6000</a>
+          <a class="btn btn-primary" href="tel:7135886000">Hablar con un abogado: 713-588-6000</a>
         </div>
       </div>
     </section>
@@ -656,7 +690,7 @@
           <p class="section-copy">
             Nuestro objetivo principal es ayudar a víctimas de negligencia para que puedan ponerse de pie otra vez. Creemos en hacer lo correcto y ser una voz para las personas lesionadas.
           </p>
-          <a class="btn btn-red" href="#contacto">Solicitar consulta gratis</a>
+          <a class="btn btn-primary" href="#contacto">Solicitar consulta gratis</a>
         </div>
 
         <div class="quote-box">
@@ -666,7 +700,7 @@
       </div>
     </section>
 
-    <section id="testimonios" class="section-red">
+    <section id="testimonios" class="section-gradient">
       <div class="container">
         <div class="eyebrow" style="color:#fff; opacity:.9;">Testimonios reales</div>
         <h2 class="section-title">Clientes que confiaron en Dunk Law Firm</h2>
@@ -716,12 +750,17 @@
             </a>
 
             <div style="margin-top: 24px;">
-              <a class="btn btn-red" href="tel:7135886000">Llame ahora</a>
+              <a class="btn btn-primary" href="tel:7135886000">Llame ahora</a>
             </div>
           </div>
 
           <div class="form-card">
-            <form action="mailto:info@dunklawyers.com" method="post" enctype="text/plain">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="Nuevo lead en español - Dunk Law Firm" />
+              <input type="hidden" name="from_name" value="Dunk Law Firm Landing Page" />
+              <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
               <input type="text" name="nombre" placeholder="Nombre completo" required />
               <input type="tel" name="telefono" placeholder="Teléfono" required />
               <input type="email" name="email" placeholder="Correo electrónico" />
@@ -735,7 +774,9 @@
                 <option>Otro</option>
               </select>
               <textarea name="mensaje" placeholder="Cuéntenos brevemente qué pasó"></textarea>
-              <button class="btn btn-red" type="submit">Enviar mensaje</button>
+
+              <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+              <p class="form-note">Al enviar este formulario, acepta ser contactado por Dunk Law Firm. La consulta es gratis.</p>
             </form>
           </div>
         </div>
@@ -767,7 +808,8 @@
   </footer>
 
   <div class="sticky-mobile-cta">
-    <a class="btn btn-red" href="tel:7135886000">Llamar 713-588-6000</a>
+    <a class="btn btn-primary" href="tel:7135886000">Llamar 713-588-6000</a>
   </div>
 </body>
 </html>
+
