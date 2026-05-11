@@ -91,18 +91,17 @@
       font-size: 1rem;
     }
 
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      background: var(--green);
-      display: grid;
-      place-items: center;
-      color: var(--white);
-      font-size: 1.35rem;
-      font-weight: 900;
-      box-shadow: 0 0 0 5px rgba(106,161,47,0.26);
-      flex: 0 0 auto;
+    .brand-logo {
+      height: 54px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-logo {
+      height: 78px;
+      width: auto;
+      display: block;
+      margin-bottom: 14px;
     }
 
     .nav-links {
@@ -530,8 +529,12 @@
         font-size: 0.78rem;
       }
 
-      .brand span:last-child {
-        font-size: 0.85rem;
+      .brand-logo {
+        height: 48px;
+      }
+
+      .footer-logo {
+        height: 64px;
       }
 
       .hero {
@@ -576,8 +579,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Dunk Law Firm inicio">
-        <span class="brand-mark">D</span>
-        <span>Dunk Law Firm</span>
+        <img class="brand-logo" src="assets/dunk-logo.png" alt="Dunk Law Firm, PLLC" />
       </a>
 
       <nav class="nav-links" aria-label="Navegación principal">
@@ -787,10 +789,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="brand" style="margin-bottom: 12px;">
-          <span class="brand-mark">D</span>
-          <span>Dunk Law Firm</span>
-        </div>
+        <img class="footer-logo" src="assets/dunk-logo.png" alt="Dunk Law Firm, PLLC" />
         <p>
           La información en este sitio es solo para fines informativos generales. Nada en este sitio debe tomarse como asesoría legal para un caso o situación individual.
         </p>
