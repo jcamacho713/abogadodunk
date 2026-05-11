@@ -71,29 +71,22 @@
       flex-wrap: nowrap;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 1rem;
+    /* ── LOGO ── */
+    .nav-logo {
+      height: 56px;
+      width: auto;
+      display: block;
       flex-shrink: 0;
+      /* logo has black background — invert makes it transparent-friendly on dark bg */
+      filter: invert(1);
     }
 
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      background: var(--green);
-      display: grid;
-      place-items: center;
-      color: var(--white);
-      font-size: 1.35rem;
-      font-weight: 900;
-      box-shadow: 0 0 0 5px rgba(106,161,47,0.26);
-      flex: 0 0 auto;
+    .footer-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+      margin-bottom: 16px;
+      filter: invert(1);
     }
 
     .nav-links {
@@ -546,7 +539,8 @@
     /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 640px) {
       .top-bar { font-size: 0.78rem; }
-      .brand span:last-child { font-size: 0.85rem; }
+
+      .nav-logo { height: 44px; }
 
       .hero { padding: 52px 0 48px; }
       section { padding: 54px 0; }
@@ -571,9 +565,9 @@
 
   <header>
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Dunk Law Firm inicio">
-        <span class="brand-mark">D</span>
-        <span>Dunk Law Firm</span>
+
+      <a href="#inicio" aria-label="Dunk Law Firm inicio">
+        <img class="nav-logo" src="DunkstackedlogoWHITE.png" alt="Dunk Law Firm, PLLC" />
       </a>
 
       <nav class="nav-links" aria-label="Navegación principal">
@@ -773,10 +767,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <div class="brand" style="margin-bottom:12px;">
-          <span class="brand-mark">D</span>
-          <span>Dunk Law Firm</span>
-        </div>
+        <img class="footer-logo" src="DunkstackedlogoWHITE.png" alt="Dunk Law Firm, PLLC" />
         <p>La información en este sitio es solo para fines informativos generales. Nada en este sitio debe tomarse como asesoría legal para un caso o situación individual.</p>
         <div class="socials">
           <a class="social-btn" href="https://www.facebook.com/dunklawfirm" target="_blank" rel="noopener" aria-label="Facebook">f</a>
