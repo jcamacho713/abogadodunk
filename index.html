@@ -71,14 +71,11 @@
       flex-wrap: nowrap;
     }
 
-    /* ── LOGO ── */
     .nav-logo {
       height: 56px;
       width: auto;
       display: block;
       flex-shrink: 0;
-      /* logo has black background — invert makes it transparent-friendly on dark bg */
-      filter: invert(1);
     }
 
     .footer-logo {
@@ -86,7 +83,6 @@
       width: auto;
       display: block;
       margin-bottom: 16px;
-      filter: invert(1);
     }
 
     .nav-links {
@@ -191,9 +187,7 @@
       box-shadow: 0 12px 28px rgba(15,85,126,0.34);
     }
 
-    .btn-primary:hover {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
-    }
+    .btn-primary:hover { background: linear-gradient(135deg, var(--blue-dark), var(--blue)); }
 
     .btn-outline {
       border-color: rgba(255,255,255,0.8);
@@ -525,13 +519,7 @@
       .nav > .btn-primary { display: none; }
       .hamburger { display: flex; }
 
-      .hero-grid,
-      .split,
-      .contact-panel,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .hero-grid, .split, .contact-panel, .footer-grid { grid-template-columns: 1fr; }
       .cards { grid-template-columns: repeat(2, 1fr); }
       .practice-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -539,22 +527,13 @@
     /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 640px) {
       .top-bar { font-size: 0.78rem; }
-
       .nav-logo { height: 44px; }
-
       .hero { padding: 52px 0 48px; }
       section { padding: 54px 0; }
-
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; }
-
       .cards { grid-template-columns: 1fr; }
-
-      .contact-info,
-      .form-card,
-      .quote-box,
-      .card { padding: 22px; }
-
+      .contact-info, .form-card, .quote-box, .card { padding: 22px; }
       .sticky-mobile-cta { display: block; }
     }
   </style>
@@ -567,7 +546,7 @@
     <div class="container nav">
 
       <a href="#inicio" aria-label="Dunk Law Firm inicio">
-        <img class="nav-logo" src="DunkstackedlogoWHITE.png" alt="Dunk Law Firm, PLLC" />
+        <img class="nav-logo" src="Dunkstackedlogowhite.png" alt="Dunk Law Firm, PLLC" />
       </a>
 
       <nav class="nav-links" aria-label="Navegación principal">
@@ -597,6 +576,7 @@
 
   <main id="inicio">
 
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -627,6 +607,7 @@
       </div>
     </section>
 
+    <!-- VALUE PROPS -->
     <section class="section-light">
       <div class="container">
         <h2 class="section-title">Si sufrió una lesión, no tiene que enfrentar esto solo.</h2>
@@ -651,6 +632,7 @@
       </div>
     </section>
 
+    <!-- PRACTICE AREAS -->
     <section id="areas" class="section-dark">
       <div class="container">
         <div class="eyebrow">Áreas de práctica</div>
@@ -676,6 +658,7 @@
       </div>
     </section>
 
+    <!-- TEAM / ABOUT -->
     <section id="equipo" class="section-light">
       <div class="container split">
         <div>
@@ -691,6 +674,7 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS -->
     <section id="testimonios" class="section-gradient">
       <div class="container">
         <div class="eyebrow" style="color:#fff;opacity:.9;">Testimonios reales</div>
@@ -712,6 +696,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contacto" class="section-dark">
       <div class="container">
         <div class="eyebrow">Contáctenos hoy</div>
@@ -767,7 +752,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <img class="footer-logo" src="DunkstackedlogoWHITE.png" alt="Dunk Law Firm, PLLC" />
+        <img class="footer-logo" src="Dunkstackedlogowhite.png" alt="Dunk Law Firm, PLLC" />
         <p>La información en este sitio es solo para fines informativos generales. Nada en este sitio debe tomarse como asesoría legal para un caso o situación individual.</p>
         <div class="socials">
           <a class="social-btn" href="https://www.facebook.com/dunklawfirm" target="_blank" rel="noopener" aria-label="Facebook">f</a>
